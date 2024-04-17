@@ -1,20 +1,18 @@
-public class Curso(string nome) : ICurso
+public class Curso : ICurso
 {
-    public string Nome { get; set; } = nome;
-    public List<Aluno> Alunos { get; } = [];
+    public string Nome { get; set; }
+    public List<Aluno> Alunos { get; }
 
-    public bool CadastrarAluno(Aluno aluno)
-    {
-        try
-        {
+    public Curso(string nome){
+        Nome = nome;
+        Alunos = new List<Aluno>();
+    }
+    public void CadastrarAluno(Aluno aluno){
             Alunos.Add(aluno);
-            return true;
-        }
-        catch (System.Exception)
-        {
-            
-            throw new Exception("deu errado");
-        }
+    }
+
+    public bool ValidarAlunoParaCadastro(Aluno aluno){
+        return false;
     }
 
 }
