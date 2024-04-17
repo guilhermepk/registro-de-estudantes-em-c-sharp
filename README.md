@@ -1,3 +1,6 @@
+- dotnet new console --use-program-main
+- dotnet run
+
 # Registro de estudantes
 
 ## Descrição do que deve ser feito
